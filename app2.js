@@ -1,3 +1,19 @@
+$.getJSON("myProducts.js", function(result){
+    var pList = $("#products");
+    var dummyURL = "https://healthkarttesting.github.io/"
+    $.each(result, function(i)
+    {
+        var li = $('<li/>')
+            .html(
+                $('<a>').attr({
+                    'href' : dummyURL + result[i].url
+                }).text(result[i].url)
+            )
+            .appendTo(pList);
+    });
+});
+
+setTimeout(function() {
 $.getJSON("myJSON.js", function(result){
     var cList = $("#myID");
     $.each(result, function(i)
@@ -7,3 +23,4 @@ $.getJSON("myJSON.js", function(result){
             .appendTo(cList);
     });
 });
+},5000);
