@@ -13,7 +13,6 @@ $.getJSON("myProducts.js", function(result){
     });
 });
 
-setTimeout(function() {
 $.getJSON("myJSON.js", function(result){
     var cList = $("#myID");
     $.each(result, function(i)
@@ -23,4 +22,3 @@ $.getJSON("myJSON.js", function(result){
             .appendTo(cList);
     });
 });
-},5000);
