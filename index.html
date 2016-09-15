@@ -4,11 +4,25 @@
     <title>HELTHKART SEO TESTING</title>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <ul id="products">
-    </ul>
-    <ul id="myID">
-    </ul>
-    <script src="app2.js"></script>
+    <div id="myID">
+            </div>
+     <script type="text/javascript">
+            var navConnection={};
+            if (navigator.connection) {
+                //Network Information API is supported!
+//                alert('support kr raha hai bhai');
+                var type=navigator.connection.type;
+                //alert(type);
+                if(navigator.connection.downlinkMax){
+                    downMax=navigator.connection.downlinkMax;
+                    // alert("Net Speed-"+navigator.connection.downlinkMax +'. Connection Type-'+ type);
+                    aa = "Net Speed-"+navigator.connection.downlinkMax +'. Connection Type-'+ type;
+                    navConnection.connectionType=type;
+                    navConnection.downLinkM=downMax;
+//                    alert(navigator.connection.downlinkMax);
+                }
+            }
+            document.getElementById("myID").value=aa;
+        </script>
 </body>
 </html>
