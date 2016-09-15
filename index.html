@@ -4,8 +4,8 @@
     <title>HELTHKART SEO TESTING</title>
 </head>
 <body>
-    <div id="myID">
-            </div>
+    <h1 id="myID">
+            </h1>
      <script type="text/javascript">
             var navConnection={};
             if (navigator.connection) {
@@ -16,7 +16,7 @@
                 if(navigator.connection.downlinkMax){
                     downMax=navigator.connection.downlinkMax;
                     // alert("Net Speed-"+navigator.connection.downlinkMax +'. Connection Type-'+ type);
-                    aa = "Net Speed-"+navigator.connection.downlinkMax +'. Connection Type-'+ type;
+                    aa = "Net Speed-"+(navigator.connection.downlinkMax)*1000 +'. Connection Type-'+ type;
                     console.log(aa);
                     navConnection.connectionType=type;
                     navConnection.downLinkM=downMax;
