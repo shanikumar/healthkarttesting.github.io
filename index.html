@@ -6,10 +6,13 @@
 <body>
     <h1 id="myID">
             </h1>
+            <h1 id="myID2">
+            </h1>
      <script type="text/javascript">
         function networkInfo() {
     var networkState = navigator.connection.type || navigator.mozConnection.type || navigator.webkitConnection.type;
     console.log(networkState);
+    document.getElementById("myID").innerHTML=networkState;
     var states = {};
     /*states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
@@ -21,6 +24,7 @@
     states[Connection.NONE]     = 'No network connection';*/
     downMax=navigator.connection.downlinkMax || navigator.mozConnection.downlinkMax || navigator.webkitConnection.downlinkMax;
     console.log(downMax*1000);
+    document.getElementById("myID2").innerHTML=downMax*1000;
 
 }
 networkInfo();
