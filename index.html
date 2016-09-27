@@ -10,13 +10,25 @@
         "@context": "http://schema.org",
         "@type": "NewsArticle",
         "author": "Akshit Sawhney",
-        "publisher": "Healthkart",
+        "publisher": {
+    "@type": "Organization",
+    "name": "Healthkart",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://google.com/logo.jpg",
+      "width": 600,
+      "height": 60
+    }
+  },
         "headline": "Healthkart First AMP Article",
         "datePublished": "2015-10-07T12:02:41Z",
         "dateModified": "2016-09-07T12:02:41Z",
-        "image": [
-            "logo.png"
-        ],
+        "image": {
+    "@type": "ImageObject",
+    "url": "https://google.com/thumbnail1.jpg",
+    "height": 800,
+    "width": 800
+  },
         "mainEntityOfPage": {
          "@type": "WebPage",
          "@id": "http://connect.healthkart.com/"
@@ -101,7 +113,7 @@
     </div>
     <div class="hkc-header-middle-strip hide-mobile">
     <div class="hms-innerWrapper">
-    <div class="connectLogo"><a href="/"></a></div>
+    <div class="connectLogo"><a href="/"><amp-img src="connectLogo.webp" width="10px" height="10px"></amp-img></a></div>
     <div class="search-con">
     <div class="search">
     <div class="region region-sidebar-search">
